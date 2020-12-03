@@ -1,0 +1,18 @@
+<h1>Ingresar nuevo artículo:</h1>
+<div class="form-group">
+  <form>
+    <label for="titulo">Título:</label>
+    <input name="titulo" type="text" class="form-control" placeholder="Ingrese título" #titulo />
+    <br />
+
+    <label for="cuerpo">Cuerpo:</label>
+    <input name="cuerpo" type="text" class="form-control" placeholder="Ingrese cuerpo del artículo" #cuerpo />
+    <br />
+
+    <label for="usuarioId">ID del usuario:</label>
+    <input name="usuarioId" type="number" class="form-control" placeholder="Ingrese id del usuario" #usuarioId />
+    <br />
+
+    <button class="btn btn-outline-success" (click)="createPost(titulo, cuerpo, usuarioId)">Crear</button>
+  </form> 
+</div>

@@ -12,13 +12,15 @@ import { PostsComponent } from './posts/posts.component';
 import { PostsService } from './posts.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import { UploadPostComponent } from './upload-post/upload-post.component';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent},
   { path: 'about-us', component: AboutUsComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'register', component: RegisterComponent},
-  { path: 'posts', component: PostsComponent}
+  { path: 'posts', component: PostsComponent},
+  { path: 'create-post', component: UploadPostComponent}
 ];
 
 @NgModule({
@@ -29,6 +31,7 @@ const routes: Route[] = [
     RegisterComponent,
     HomeComponent,
     PostsComponent,
+    UploadPostComponent,
   ],
   imports: [
     BrowserModule,

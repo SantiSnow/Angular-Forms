@@ -15,4 +15,8 @@ export class PostsService {
   getPosts(){
     return this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
   }
+
+  setPost(post){
+    return this.http.post('https://jsonplaceholder.typicode.com/posts', post);
+  }
 }
