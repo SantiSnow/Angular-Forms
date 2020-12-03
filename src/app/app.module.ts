@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Route[] = [
-  { path: '', component: AppComponent},
+  { path: '', component: HomeComponent},
   { path: 'about-us', component: AboutUsComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'register', component: RegisterComponent}
@@ -20,6 +21,7 @@ const routes: Route[] = [
     AboutUsComponent,
     ContactComponent,
     RegisterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
