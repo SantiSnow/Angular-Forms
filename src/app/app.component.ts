@@ -6,5 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'requests-app';
+
+  constructor(){
+    
+  }
+
+  agregarUsuario(nombre, apellido, edad, email){
+
+    console.log(nombre.value);
+    console.log(apellido.value);
+    console.log(edad.value);
+    console.log(email.value);
+
+    return false;
+  }
+
+  borrarCampos(nombre, apellido, edad, email){
+    nombre.value = "";
+    apellido.value = "";
+    edad.value = ""; 
+    email.value = "";
+
+    return false;
+  }
+
 }
