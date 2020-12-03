@@ -7,12 +7,18 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
+import { PostsComponent } from './posts/posts.component';
+
+import { PostsService } from './posts.service';
+
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent},
   { path: 'about-us', component: AboutUsComponent},
   { path: 'contact', component: ContactComponent},
-  { path: 'register', component: RegisterComponent}
+  { path: 'register', component: RegisterComponent},
+  { path: 'posts', component: PostsComponent}
 ];
 
 @NgModule({
@@ -22,12 +28,16 @@ const routes: Route[] = [
     ContactComponent,
     RegisterComponent,
     HomeComponent,
+    PostsComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    PostsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

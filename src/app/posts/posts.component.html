@@ -1,0 +1,18 @@
+
+<h1>Forum posts</h1>
+
+<p>
+    Here you can find the latest posts:
+</p>
+
+<div>
+    <div *ngFor="let i of posts">
+        <div class="media">
+            <img src="./../../assets/dummy.png" class="mr-3" alt="...">
+            <div class="media-body">
+                <h5 class="mt-0">{{ i.title }}</h5>
+                <p>{{ i.body }}</p>
+            </div>
+        </div>
+    </div>
+</div>
