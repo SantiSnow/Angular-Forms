@@ -1,24 +1,19 @@
 
-<h1>Formulario:</h1>
-<div class="form-group">
-  <form>
-    <label for="nombre">Nombre:</label>
-    <input name="nombre" type="text" class="form-control" placeholder="Ingrese nombre" #nombre />
-    <br />
+<nav>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/contact">Contact</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/about-us">About us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/register">Register</a>
+    </li>
+  </ul>
+</nav>
 
-    <label for="apellido">Apellido:</label>
-    <input name="apellido" type="text" class="form-control" placeholder="Ingrese apellido" #apellido />
-    <br />
-
-    <label for="edad">Edad:</label>
-    <input name="edad" type="number" class="form-control" placeholder="Ingrese edad" #edad />
-    <br />
-
-    <label for="email">Email:</label>
-    <input name="email" type="email" class="form-control" placeholder="Ingrese email" #email />
-    <br />
-
-    <button class="btn btn-outline-success" (click)="agregarUsuario(nombre, apellido, edad, email)">Enviar</button>
-    <button class="btn btn-outline-danger" (click)="borrarCampos(nombre, apellido, edad, email)">Limpiar campos</button>
-  </form> 
-</div>
+<router-outlet></router-outlet>
