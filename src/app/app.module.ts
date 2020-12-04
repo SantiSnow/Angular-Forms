@@ -22,7 +22,8 @@ const routes: Route[] = [
   { path: 'contact', component: ContactComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'posts', component: PostsComponent},
-  { path: 'create-post', component: UploadPostComponent}
+  { path: 'create-post', component: UploadPostComponent},
+  { path: 'delete-posts', component: DeletePostComponent}
 ];
 
 @NgModule({

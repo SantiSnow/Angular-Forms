@@ -9,14 +9,20 @@ import { PostsService } from './../posts.service'
 })
 export class DeletePostComponent{
 
-  constructor(private postService: PostsService) { 
+  posts = [];
 
+  constructor(private postService: PostsService) { 
+    this.postService.getPosts().subscribe(data=>{
+      this.posts = data;
+      console.log(data);
+    });
   }
 
 
   deletePost(postId: number){
     this.postService.deletePost(postId).subscribe(
       res=>{
+        console.log("Recurso eliminado");
         console.log(res);
       },
       err=>{
