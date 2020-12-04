@@ -13,6 +13,8 @@ import { PostsService } from './posts.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { UploadPostComponent } from './upload-post/upload-post.component';
+import { UpdatePostComponent } from './update-post/update-post.component';
+import { DeletePostComponent } from './delete-post/delete-post.component';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent},
@@ -32,6 +34,8 @@ const routes: Route[] = [
     HomeComponent,
     PostsComponent,
     UploadPostComponent,
+    UpdatePostComponent,
+    DeletePostComponent,
   ],
   imports: [
     BrowserModule,

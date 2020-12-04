@@ -19,4 +19,12 @@ export class PostsService {
   setPost(post){
     return this.http.post('https://jsonplaceholder.typicode.com/posts', post);
   }
+
+  deletePost(postId){
+    return this.http.delete('https://jsonplaceholder.typicode.com/posts/' + postId);
+  }
+
+  updatePost(post){
+    return this.http.put('https://jsonplaceholder.typicode.com/posts/' + post.id, post);
+  }
 }

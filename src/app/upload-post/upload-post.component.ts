@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
+
 import { PostsService } from './../posts.service';
 
 @Component({
