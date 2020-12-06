@@ -10,7 +10,14 @@ import { PostsService } from './../posts.service';
 })
 export class UpdatePostComponent {
 
-  constructor(private postService: PostsService) { }
+  posts = [];
+
+  constructor(private postService: PostsService) { 
+    this.postService.getPosts().subscribe(data=>{
+      this.posts = data;
+      console.log(data);
+    });
+  }
 
 
   updatePost(post: Post){
