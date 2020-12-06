@@ -8,14 +8,21 @@
 <div>
     <div *ngFor="let i of posts">
         <div class="media">
-            <img src="./../../assets/dummy.png" class="mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-0">{{ i.title }}</h5>
-                <p>{{ i.body }}</p>
-                <p>Post Id: {{ i.id }}</p>
-                <p>User Id: {{ i.userId }}</p>
+            
+            <div class="form-group">
+                <img src="./../../assets/dummy.png" class="mr-3" alt="...">
+                <div class="media-body">
+                    <h5 class="mt-0">{{ i.title }}</h5>
+                    <p>{{ i.body }}</p>
+                    <p>Post Id: {{ i.id }}</p>
+                    <p>User Id: {{ i.userId }}</p>
+                </div>
+                <label for="titulo">Título: </label>
+                <input type="text" name="titulo" class="form-control" placeholder="Ingrese nuevo título" #titulo />
+                <label for="titulo">Cuerpo: </label>
+                <input type="text" name="cuerpo" class="form-control" placeholder="Ingrese nuevo cuerpo" #cuerpo />
+                <button class="btn btn-outline-success" (click)="updatePost(i, titulo, cuerpo)">Update Post</button>
             </div>
-            <button class="btn btn-outline-success">Update Post</button>
         </div>
         <hr>
         <br />

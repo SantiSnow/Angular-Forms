@@ -15,20 +15,25 @@ export class UpdatePostComponent {
   constructor(private postService: PostsService) { 
     this.postService.getPosts().subscribe(data=>{
       this.posts = data;
-      console.log(data);
     });
   }
 
 
-  updatePost(post: Post){
+  updatePost(post, titulo, cuerpo){
+
+    post.title = titulo.value;
+    post.body = cuerpo.value;
+
     this.postService.updatePost(post).subscribe(
       res=>{
+        console.log("Recurso actualizado");
         console.log(res);
       },
       err=>{
         console.log(err);
       }
     );
+    return false;
   }
 
 }
