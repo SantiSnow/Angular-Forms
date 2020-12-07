@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UploadPostComponent } from './upload-post/upload-post.component';
 import { UpdatePostComponent } from './update-post/update-post.component';
 import { DeletePostComponent } from './delete-post/delete-post.component';
+import { PostComponent } from './post/post.component';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent},
@@ -24,7 +25,8 @@ const routes: Route[] = [
   { path: 'posts', component: PostsComponent},
   { path: 'create-post', component: UploadPostComponent},
   { path: 'delete-posts', component: DeletePostComponent},
-  { path: 'update-posts', component: UpdatePostComponent}
+  { path: 'update-posts', component: UpdatePostComponent},
+  { path: 'post/:id', component: PostComponent}
 ];
 
 @NgModule({
@@ -38,6 +40,7 @@ const routes: Route[] = [
     UploadPostComponent,
     UpdatePostComponent,
     DeletePostComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,
